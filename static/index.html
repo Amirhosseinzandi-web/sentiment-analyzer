@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Sentiment Analyzer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+    <div class="bg-particles">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header-text">
+                <h1 class="title">AI Sentiment Analyzer</h1>
+                <p class="subtitle">Analyze the sentiment of any text using advanced AI.</p>
+            </div>
+            <div class="robot-head">
+                <div class="robot-glow"></div>
+                <div class="robot-face">
+                    <div class="robot-eye left"></div>
+                    <div class="robot-eye right"></div>
+                    <div class="robot-circuit c1"></div>
+                    <div class="robot-circuit c2"></div>
+                    <div class="robot-circuit c3"></div>
+                    <div class="robot-ring"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- INPUT SECTION -->
+        <section class="input-section">
+            <label class="input-label">Enter your text below:</label>
+            <div class="textarea-wrapper">
+                <textarea id="textInput" placeholder="spider man movie was amazing..." rows="3"></textarea>
+            </div>
+            <div class="btn-wrapper">
+                <button id="analyzeBtn" onclick="analyzeText()">
+                    <span class="btn-text">Analyze Text</span>
+                    <span class="btn-shimmer"></span>
+                </button>
+            </div>
+        </section>
+
+        <!-- RESULTS SECTION -->
+        <section class="results-section" id="resultsSection">
+            <h2 class="results-title">Analysis Results</h2>
+            <div class="results-grid">
+
+                <!-- LEFT: Sentiment Info -->
+                <div class="sentiment-info">
+                    <div class="emoji-wrapper" id="emojiWrapper">
+                        <div class="emoji-face" id="emojiFace">😊</div>
+                        <div class="emoji-glow"></div>
+                    </div>
+                    <div class="sentiment-details">
+                        <div class="sentiment-label">
+                            Sentiment: <span id="sentimentText" class="sentiment-value positive">Positive</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="dot green"></span>
+                            Confidence Score: <span id="confidenceScore">98%</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="dot green"></span>
+                            Mood: <span id="moodText">Happy &amp; Satisfied</span>
+                        </div>
+                        <div class="key-phrases-row">
+                            <span class="dot green"></span>
+                            <span>Key Phrases:</span>
+                            <span id="keyPhrases" class="phrases-list">
+                                "Amazing experience",<br>
+                                "Fantastic service",<br>
+                                "Friendly staff"
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Donut Chart -->
+                <div class="chart-section">
+                    <h3 class="chart-title">Sentiment Breakdown</h3>
+                    <div class="donut-wrapper">
+                        <div class="donut" id="donutChart"></div>
+                        <div class="donut-hole"></div>
+                    </div>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <span class="legend-dot green"></span>
+                            Positive <span id="posPercent">78%</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot yellow"></span>
+                            Neutral <span id="neuPercent">15%</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot red"></span>
+                            Negative <span id="negPercent">7%</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FOOTER FEATURES -->
+        <footer class="features-footer">
+            <div class="feature-item">
+                <div class="feature-icon">🧠</div>
+                <span>AI Analysis</span>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">😄</div>
+                <span>Emotion Detection</span>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🔍</div>
+                <span>Keyword Extraction</span>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">📋</div>
+                <span>Insightful Reports</span>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../static/app.js"></script>
+</body>
+</html>
