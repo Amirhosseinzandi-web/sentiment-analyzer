@@ -197,7 +197,6 @@ sentiment-analyzer/
 - [ ] 🔑 Key phrase extraction & highlighting
 - [ ] 📈 Batch text analysis
 - [ ] 📱 Mobile-optimized UI
-- [ ] 🔊 Voice input support
 
 ---
 
